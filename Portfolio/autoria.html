@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <input type="number" id="input-valor-1">
+    <input type="number" id="input-valor-2">
+    <button id="botao-somar">Somar</button>
+    <button id="botao-subtrair">Subtrair</button>
+    <button id="botao-multiplicar">Multiplicar</button>
+    <button id="botao-dividir">Dividir</button>
+    <p id="resultado"></p>
+    <script>
+      const botaoSomar = document.getElementById('botao-somar');
+      botaoSomar.addEventListener('click', () => {
+        const valor1 = Number(document.getElementById('input-valor-1').value);
+        const valor2 = Number(document.getElementById('input-valor-2').value);
+        const resultado = valor1 + valor2;
+        document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+      });
+
+      const botaoSubtrair = document.getElementById('botao-subtrair');
+      botaoSubtrair.addEventListener('click', () => {
+        const valor1 = Number(document.getElementById('input-valor-1').value);
+        const valor2 = Number(document.getElementById('input-valor-2').value);
+        const resultado = valor1 - valor2;
+        document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+      });
+
+      const botaoMultiplicar = document.getElementById('botao-multiplicar');
+      botaoMultiplicar.addEventListener('click', () => {
+        const valor1 = Number(document.getElementById('input-valor-1').value);
+        const valor2 = Number(document.getElementById('input-valor-2').value);
+        const resultado = valor1 * valor2;
+        document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+      });
+
+      const botaoDividir = document.getElementById('botao-dividir');
+      botaoDividir.addEventListener('click', () => {
+        const valor1 = Number(document.getElementById('input-valor-1').value);
+        const valor2 = Number(document.getElementById('input-valor-2').value);
+        const resultado = valor1 / valor2;
+        document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+      });
+    </script>
+  </body>
+</html>
