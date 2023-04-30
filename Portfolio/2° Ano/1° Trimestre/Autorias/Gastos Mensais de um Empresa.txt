@@ -1,0 +1,23 @@
+CREATE TABLE compradores (
+  id INT PRIMARY KEY,
+  nome VARCHAR(50)
+);
+
+CREATE TABLE vendedores (
+  id INT PRIMARY KEY,
+  nome VARCHAR(50)
+);
+
+CREATE TABLE gastos_mensais (
+  id INT PRIMARY KEY,
+  mes VARCHAR(10),
+  comprador_id INT,
+  vendedor_id INT,
+  valor DECIMAL(10, 2),
+  FOREIGN KEY (comprador_id) REFERENCES compradores(id),
+  FOREIGN KEY (vendedor_id) REFERENCES vendedores(id)
+);
+
+INSERT INTO compradores (id, nome) VALUES (1, 'João');
+INSERT INTO vendedores (id, nome) VALUES (1, 'Maria');
+INSERT INTO gastos_mensais (id, mes, comprador_id, vendedor_id, valor) VALUES (1, 'janeiro', 1, 1, 1000.00);
