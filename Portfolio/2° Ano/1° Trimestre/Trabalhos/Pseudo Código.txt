@@ -1,0 +1,79 @@
+programa
+{
+
+inclua biblioteca Matematica --> mat
+	
+	funcao inicio()
+	{
+		atividade1()
+	}
+
+	funcao atividade1()
+	{
+		real preco
+		real valorpago
+		escreva("Escreva o preço do produto\n")
+		leia(preco)
+		escreva("Digite quanto foi pago pelo produto\n")
+		leia(valorpago)
+		se (preco > valorpago)
+		{
+			real diferenca = preco - valorpago
+			escreva("Ainda falta pagar a diferença de "+diferenca)
+			
+		}
+		senao
+		{
+			real troco = valorpago - preco
+			se (troco == 0)
+			{
+				escreva("Valor totalmente pago")
+			}
+			senao
+			{
+				escreva("Valor totalmente pago com troco de"+troco)
+			}
+		}
+	}
+}
+
+
+
+	funcao atividade2()
+	{
+		real distancia
+		real litros
+		escreva("Digite a distância\n")
+		leia(distancia)
+		escreva("Digite os litros\n")
+		leia(litros)
+		real consumo
+		consumo = distancia/litros
+		escreva("A autonomia do veículo é de"+consumo+"km/l")
+		
+	}
+
+
+
+
+
+
+
+funcao atividade3()
+	{
+		inteiro digito
+		escreva("Digite um número!")
+		leia(digito)
+		inteiro quantidade = 0
+		inteiro numero = 0
+		enquanto (numero < digito)
+		{
+			se (numero %2 == 0)
+			{
+				quantidade ++
+			}
+			numero ++
+		}
+		escreva("A quantidade de pares é: "+quantidade)
+	}
+
